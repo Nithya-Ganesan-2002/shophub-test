@@ -91,6 +91,11 @@ const fetchCart = (data) => {
   // console.log(user);
   let html = "";
   let totalPrice = Number(0);
+  // Update cart counter
+  const cartCounter = document.querySelector(".cart-counter");
+  if (cartCounter) {
+    cartCounter.textContent = data.length;
+  }
   if (data.length === 0) {
     document.querySelector(".hide-cart").style.display = "block";
     document.querySelector(".show-cart").style.display = "none";

@@ -1,0 +1,99 @@
+"
+        MATCH (u:User {Username: 'c448a438-7051-707c-750a-69b89ad4bda3'})-[:INVOLVED_IN]->(d:Discussion)<-[:HAS_CHILD]-(n)<-[:HAS_CHILD*0..]-(p:Project|Product)
+        RETURN ID(d) AS discussion_id, d.Title AS title, d.Description AS description, d.updated_at AS date, ID(n) as task_id, n.Type as task_type , n.Title as task_title, ID(p) AS project_id, p.Title AS project_title
+        ",0.02243638038635254
+"
+        MATCH (n:Project) 
+        WHERE ID(n) = $node_id 
+        RETURN ID(n) AS id, LABELS(n) AS labels, properties(n) AS properties
+        , n.is_active AS is_active",0.005152225494384766
+"
+            MATCH (d:code_query)
+            WHERE d.Username = $user_id 
+            AND d.IsDeleted = false 
+            AND d.ProjectId = $project_id
+            WITH d, ID(d) as node_id
+            OPTIONAL MATCH (p:Project)
+            WHERE ID(p) = d.ProjectId
+            RETURN d, node_id, p.Title as project_title
+            ORDER BY d.CreatedAt DESC 
+            LIMIT $limit
+            ",0.03955531120300293
+"
+        MATCH (u:User)-[r:WORKS_ON]->(p:Project|Product)
+        WHERE ID(p) = 44633
+        RETURN u.Username AS user_id, u.Name as name, u.Email as email, r.role AS role, r.responsibilities AS responsibilities
+        ",0.3303496837615967
+"
+        MATCH (n:Project) 
+        WHERE ID(n) = $node_id 
+        RETURN ID(n) AS id, LABELS(n) AS labels, properties(n) AS properties
+        , n.is_active AS is_active",0.0027551651000976562
+"
+        MATCH (n:Project) 
+        WHERE ID(n) = $node_id 
+        RETURN ID(n) AS id, LABELS(n) AS labels, properties(n) AS properties
+        , n.is_active AS is_active",0.004473686218261719
+"
+        MATCH (u:User)-[r:WORKS_ON]->(p:Project|Product)
+        WHERE ID(p) = 44633
+        RETURN u.Username AS user_id, u.Name as name, u.Email as email, r.role AS role, r.responsibilities AS responsibilities
+        ",0.0039632320404052734
+"
+        MATCH (n:Project) 
+        WHERE ID(n) = $node_id 
+        RETURN ID(n) AS id, LABELS(n) AS labels, properties(n) AS properties
+        , n.is_active AS is_active",0.002778291702270508
+"MATCH (n)-[:HAS_CHILD]->(m) WHERE ID(m) = $child_node_id RETURN ID(n) AS id, LABELS(n) AS labels, properties(n) AS properties",0.0027413368225097656
+"
+        MATCH (n) 
+        WHERE ID(n) = $node_id 
+        RETURN ID(n) AS id, LABELS(n) AS labels, properties(n) AS properties
+        ",0.006157875061035156
+"
+            MATCH (d:code_query)
+            WHERE d.Username = $user_id 
+            AND d.IsDeleted = false 
+            AND d.ProjectId = $project_id
+            WITH d, ID(d) as node_id
+            OPTIONAL MATCH (p:Project)
+            WHERE ID(p) = d.ProjectId
+            RETURN d, node_id, p.Title as project_title
+            ORDER BY d.CreatedAt DESC 
+            LIMIT $limit
+            ",0.008776187896728516
+"
+        MATCH (u:User)-[r:WORKS_ON]->(p:Project|Product)
+        WHERE ID(p) = 44633
+        RETURN u.Username AS user_id, u.Name as name, u.Email as email, r.role AS role, r.responsibilities AS responsibilities
+        ",1.1354286670684814
+"
+        MATCH (u:User {Username: 'c448a438-7051-707c-750a-69b89ad4bda3'})-[:INVOLVED_IN]->(d:Discussion)<-[:HAS_CHILD]-(n)<-[:HAS_CHILD*0..]-(p:Project|Product)
+        RETURN ID(d) AS discussion_id, d.Title AS title, d.Description AS description, d.updated_at AS date, ID(n) as task_id, n.Type as task_type , n.Title as task_title, ID(p) AS project_id, p.Title AS project_title
+        ",0.02007007598876953
+"
+        MATCH (n:Project) 
+        WHERE ID(n) = $node_id 
+        RETURN ID(n) AS id, LABELS(n) AS labels, properties(n) AS properties
+        , n.is_active AS is_active",0.012644052505493164
+"
+        MATCH (n:Project) 
+        WHERE ID(n) = $node_id 
+        RETURN ID(n) AS id, LABELS(n) AS labels, properties(n) AS properties
+        , n.is_active AS is_active",0.003195047378540039
+"
+        MATCH (u:User)-[r:WORKS_ON]->(p:Project|Product)
+        WHERE ID(p) = 44633
+        RETURN u.Username AS user_id, u.Name as name, u.Email as email, r.role AS role, r.responsibilities AS responsibilities
+        ",0.0030934810638427734
+"
+        MATCH (n:Project) 
+        WHERE ID(n) = $node_id 
+        RETURN ID(n) AS id, LABELS(n) AS labels, properties(n) AS properties
+        , n.is_active AS is_active",0.002599477767944336
+"
+        MATCH (n:Project) 
+        WHERE ID(n) = $node_id 
+        RETURN ID(n) AS id, LABELS(n) AS labels, properties(n) AS properties
+        , n.is_active AS is_active",0.002901792526245117
+"MATCH (n)-[:HAS_CHILD]->(m) WHERE ID(m) = $child_node_id RETURN ID(n) AS id, LABELS(n) AS labels, properties(n) AS properties",0.0026443004608154297

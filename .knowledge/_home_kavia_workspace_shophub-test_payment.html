@@ -1,0 +1,82 @@
+{
+  "is_source_file": true,
+  "format": "HTML",
+  "description": "This file is an HTML source code for a payment page in a shopping application called Shophub. It includes navigation links, modals for login and signup, forms for payment methods, and integrates Firebase for user authentication and analytics.",
+  "external_files": [
+    "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+    "https://www.googletagmanager.com/gtag/js?id=G-DZDK7934TE",
+    "https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js",
+    "https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js",
+    "https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js",
+    "https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js",
+    "js/auth.js",
+    "js/payment.js",
+    "styles/materialize.css",
+    "styles/styles.css",
+    "styles/materializecssicons.css"
+  ],
+  "external_methods": [
+    "firebase.auth()",
+    "firebase.firestore()",
+    "firebase.initializeApp()",
+    "firebase.analytics()"
+  ],
+  "published": [
+    "login-form",
+    "signup-form",
+    "online-payment-gateway",
+    "checkout-form-errors"
+  ],
+  "classes": [],
+  "methods": [
+    {
+      "name": "orderPlacedOnline",
+      "description": "Handles order processing for online payment."
+    },
+    {
+      "name": "orderPlacedCod",
+      "description": "Handles order processing for cash on delivery."
+    },
+    {
+      "name": "forgetpass",
+      "description": "Handles user password retrieval."
+    },
+    {
+      "name": "newUser",
+      "description": "Handles actions for new users signing up."
+    },
+    {
+      "name": "oldUser",
+      "description": "Handles actions for existing users logging in."
+    },
+    {
+      "name": "backToLogin",
+      "description": "Navigates back to the login modal."
+    },
+    {
+      "name": "onlinePayChecked",
+      "description": "Checks the online payment option."
+    },
+    {
+      "name": "codChecked",
+      "description": "Checks the cash on delivery option."
+    }
+  ],
+  "calls": [
+    "firebase.auth()",
+    "firebase.firestore()",
+    "firebase.initializeApp()",
+    "firebase.analytics()"
+  ],
+  "search-terms": [
+    "Shophub payment page",
+    "checkout process",
+    "payment methods"
+  ],
+  "state": 2,
+  "filename": "/home/kavia/workspace/shophub-test/payment.html",
+  "hash": "6ef963bc7780d91b81b69ff9967bb1ac",
+  "format-version": 3,
+  "code-base-name": "b0298sp"
+}

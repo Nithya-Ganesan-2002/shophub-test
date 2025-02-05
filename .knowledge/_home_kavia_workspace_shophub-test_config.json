@@ -1,0 +1,23 @@
+{
+  "is_source_file": true,
+  "format": "JSON",
+  "description": "Configuration settings for Google Analytics tracking.",
+  "external_files": [],
+  "external_methods": [],
+  "published": [
+    "GA_MEASUREMENT_ID"
+  ],
+  "classes": [],
+  "methods": [],
+  "calls": [],
+  "search-terms": [
+    "Google Analytics",
+    "measurement ID",
+    "tracking configuration"
+  ],
+  "state": 2,
+  "filename": "/home/kavia/workspace/shophub-test/config.json",
+  "hash": "2d3d14cb246f82d4e88c7b18a419e6df",
+  "format-version": 3,
+  "code-base-name": "b0298sp"
+}

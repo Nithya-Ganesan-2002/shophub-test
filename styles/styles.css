@@ -151,6 +151,16 @@ body::-webkit-scrollbar {
 .accessories-highlights {
   width: 100%;
   border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.accessories-highlights:hover {
+  transform: scale(1.15);
+}
+
+/* Container for accessories highlights to prevent overflow */
+.col[class*="l"], .col[class*="m"], .col[class*="s"] {
+  overflow: hidden;
 }
 
 .grids-main-hr {
@@ -323,6 +333,16 @@ textarea:-webkit-autofill:active {
   border-radius: 10px !important;
   margin: 10px;
   height: 250px !important;
+  overflow: hidden;
+}
+
+/* Zoom effect for product images */
+.card-image img.activator {
+  transition: transform 0.3s ease;
+}
+
+.card-image img.activator:hover {
+  transform: scale(1.15);
 }
 .cart-icon {
   width: 20px;
